@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OndeEstouApp.Views.LocalPage"
+             xmlns:vm="clr-namespace:OndeEstouApp.ViewModels"
+             x:DataType="vm:LocalViewModel"
+             Title="LocalPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="📍 minha localização"/>
+
+            <Button Command="{Binding GetLocationCommand}" Text="onde estou?"/>
+
+
+            <Label Text="rua"/>
+            <Entry Text="{Binding CurrentLocation.Thoroughfare}"/>
+
+            <Label Text="bairro"/>
+            <Entry Text="{Binding CurrentLocation.SubLocality}"/>
+
+            <Label Text="cidade"/>
+            <Entry Text="{Binding CurrentLocation.Locality}"/>
+
+            <Label Text="Estado"/>
+            <Entry Text="{Binding CurrentLocation.AdminArea}"/>
+
+            <Label Text="CEP"/>
+            <Entry Text="{Binding CurrentLocation.PostalCode}"/>
+
+            <Label Text="País"/>
+            <Entry Text="{Binding CurrentLocation.CountryName}"/>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
